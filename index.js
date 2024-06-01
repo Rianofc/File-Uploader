@@ -3,7 +3,6 @@ const multer = require("multer");
 const fs = require("fs");
 const path = require("path");
 const crypto = require("crypto");
-const basicAuth = require('express-basic-auth');
 const swaggerUi = require("swagger-ui-express");
 
 const app = express();

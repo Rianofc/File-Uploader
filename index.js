@@ -7,7 +7,7 @@ const basicAuth = require('express-basic-auth');
 const swaggerUi = require("swagger-ui-express");
 
 const app = express();
-const port = 8080;
+const port = process.env.PORT || 8080 || 5000 || 3000;
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
@@ -106,7 +106,7 @@ app.delete("/delete/:fileName", (req, res) => {
 });
 
 var options = {
-    customSiteTitle: "ITzpire Uploader",
+    customSiteTitle: "exonity Uploader",
     customfavIcon: "https://i.ibb.co/GphSk0T/upload.png",
     customCss: `.topbar { display: none; }`,
     swaggerOptions: {
@@ -122,10 +122,10 @@ const swaggerDocument = {
     description: "Docs for Uploader",
     "x-logo": {
       url: "https://i.ibb.co/GphSk0T/upload.png",
-      altText: "ITzpire Upload",
+      altText: "Exonity Upload",
     },
   },
-  host: "cdn.itzpire.site",
+  host: "cdn-exonity-cc89094a0a72.herokuapp.com",
   basePath: "/",
   tags: [{ name: "Upload", description: "Endpoints related to file upload" }],
   paths: {

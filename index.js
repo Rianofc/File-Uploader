@@ -2,6 +2,7 @@ const express = require("express");
 const multer = require("multer");
 const fs = require("fs");
 const path = require("path");
+const basicAuth = require('express-basic-auth');
 const crypto = require("crypto");
 const swaggerUi = require("swagger-ui-express");
 
@@ -290,7 +291,10 @@ app.get('/file-info', (req, res, next) => {
     });
   });
 });
-
+app.use(basicAuth({
+  users: { 'rianz': '12345' },
+  challenge: true
+}));
 
 app.get('/library', (req, res, next) => {
   const folderPath = path.join(__dirname, 'file');

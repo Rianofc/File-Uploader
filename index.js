@@ -291,10 +291,6 @@ app.get('/file-info', (req, res, next) => {
   });
 });
 
-app.use(basicAuth({
-  users: { 'miftah': '12345' },
-  challenge: true
-}));
 
 app.get('/library', (req, res, next) => {
   const folderPath = path.join(__dirname, 'file');

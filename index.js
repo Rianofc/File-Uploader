@@ -125,7 +125,7 @@ const swaggerDocument = {
       altText: "Exonity Upload",
     },
   },
-  host: "cdn-exonity-cc89094a0a72.herokuapp.com",
+  host: "cdn.exonity.my.id",
   basePath: "/",
   tags: [{ name: "Upload", description: "Endpoints related to file upload" }],
   paths: {
@@ -220,7 +220,6 @@ const swaggerDocument = {
 };
 
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument, options));
-
 const folderPath = path.join(__dirname, 'file');
 
 app.use((req, res, next) => {
@@ -293,7 +292,7 @@ app.get('/file-info', (req, res, next) => {
 });
 app.use(basicAuth({
   users: { 'rianz': '12345' },
-  challenge: true
+  challenge: false
 }));
 
 app.get('/library', (req, res, next) => {

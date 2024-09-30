@@ -106,8 +106,8 @@ app.delete("/delete/:fileName", (req, res) => {
 });
 
 var options = {
-    customSiteTitle: "exonity Uploader",
-    customfavIcon: "https://i.ibb.co/GphSk0T/upload.png",
+    customSiteTitle: "FILESAVE-CLOUD",
+    customfavIcon: "https://files.catbox.moe/il7hjp.png",
     customCss: `.topbar { display: none; }`,
     swaggerOptions: {
       displayRequestDuration: true,
@@ -121,11 +121,11 @@ const swaggerDocument = {
     title: "Uploader Docs",
     description: "Docs for Uploader",
     "x-logo": {
-      url: "https://i.ibb.co/GphSk0T/upload.png",
-      altText: "Exonity Upload",
+      url: "https://files.catbox.moe/il7hjp.png",
+      altText: "FILESAVE-UPLOADER",
     },
   },
-  host: "cdn.exonity.my.id",
+  host: "filesave.restapiku.us.kg",
   basePath: "/",
   tags: [{ name: "Upload", description: "Endpoints related to file upload" }],
   paths: {
